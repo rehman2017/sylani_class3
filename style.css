@@ -1,0 +1,199 @@
+@import url("https://profile.jpeg/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Center the Card in the Body */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #555555;
+  font-family: "Open Sans", serif;
+}
+
+/* 3D Card Wrapper */
+.wrapped {
+  perspective: 3000px;
+}
+
+/* 3D Card */
+.card {
+  width: 330px;
+  height: 500px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Front and Back Pages */
+.front-page,
+.back-page {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+/* Front Page Content */
+.front-page {
+  transform: rotateY(0deg);
+  background-color: white;
+  display: grid;
+  grid-template-rows: 45% 1fr auto;
+}
+
+/* Front Top Portion */
+.front-top {
+  width: 100%;
+  background-color: #222222;
+  position: relative;
+  padding: 10px 15px;
+}
+
+/* Front Top Title */
+.front-top h1 {
+  font-size: 1.5rem;
+  color: crimson;
+  font-weight: 500;
+  text-align: end;
+}
+.front-top p {
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 0;
+  text-align: end;
+}
+
+/* Front Top Image */
+.front-top img {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  border: crimson 3px solid;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  transform: translate(0%, 50%);
+}
+
+/* Front Bottom Portion */
+.NameDesignation {
+  width: 100%;
+  margin: auto;
+}
+
+/* Front Bottom Full Name */
+.fullName {
+  font-size: 1.5rem;
+  color: #222222;
+  font-weight: 800;
+}
+.fullName span {
+  font-weight: 600;
+}
+
+/* Front Bottom Designation */
+.designation {
+  font-size: 0.8rem;
+  color: crimson;
+  font-weight: 600;
+}
+
+/* Front Bottom Personal Info */
+.personalInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid crimson;
+}
+
+/* Contact Info */
+.contactInfo p {
+  font-size: 0.75rem;
+  color: #222222;
+  font-weight: 500;
+}
+.contactInfo span {
+  font-weight: 700;
+}
+
+/* Social Icons */
+.socialIcon {
+  background-color: crimson;
+  height: 100%;
+  padding: 7px 10px;
+}
+
+.followMe {
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 600;
+}
+.frontIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+/* Back Page Content */
+.back-page {
+  transform: rotateY(180deg);
+  background-color: #222222;
+  display: grid;
+  place-items: center;
+  border: 15px solid white;
+}
+
+/* Front Top Title */
+.back-info {
+  text-align: center;
+}
+.back-info h1 {
+  font-size: 1.5rem;
+  color: crimson;
+  font-weight: 500;
+}
+.back-info p {
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Back Social Details */
+.backIcons div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 3px 0px;
+}
+.backIcons p {
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 300;
+}
+.backIcons i {
+  color: crimson;
+  transition: all 0.3s ease-in-out;
+}
+.backIcons i:hover {
+  color: rgb(255, 94, 126);
+  scale: 110%;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: rotateY(180deg);
+}
